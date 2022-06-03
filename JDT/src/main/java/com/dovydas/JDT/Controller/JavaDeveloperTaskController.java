@@ -66,6 +66,7 @@ public class JavaDeveloperTaskController {
 
             if(meeting.getResponsiblePerson().equals(meetingDelete.getSender())){
                 meetingRegister.deleteMeeting(meeting);
+                personRegister.deleteMeeting(meeting);
                 Utilities.PrintToJson(meetingRegister, "meetings.json");
                 return new ResponseEntity<>("Meeting deleted!", HttpStatus.ACCEPTED);
             } else {

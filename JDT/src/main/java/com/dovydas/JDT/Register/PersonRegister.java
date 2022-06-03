@@ -67,4 +67,13 @@ public class PersonRegister {
         return true;
 
     }
+
+    public void deleteMeeting(Meeting meeting) {
+        for (Person p : this.personList)
+        {
+            List<Meeting> meetings = p.getMeetings();
+            if(meetings.remove(meeting))
+                p.setMeetings(meetings);
+        }
+    }
 }
