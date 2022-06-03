@@ -5,13 +5,13 @@ import java.util.Date;
 public class MeetingFilters {
     private String Description;
     private String ResponsiblePerson;
-    private String Category;
-    private String Type;
+    private Meeting.Category Category;
+    private Meeting.Type Type;
     private Date StartDate;
     private Date EndDate;
     private int AttendeeCount;
 
-    public MeetingFilters(String description, String responsiblePerson, String category, String type, Date startDate, Date endDate, int attendeeCount) {
+    public MeetingFilters(String description, String responsiblePerson, Meeting.Category category, Meeting.Type type, Date startDate, Date endDate, int attendeeCount) {
         Description = description;
         ResponsiblePerson = responsiblePerson;
         Category = category;
@@ -29,11 +29,11 @@ public class MeetingFilters {
         return ResponsiblePerson;
     }
 
-    public String getCategory() {
+    public Meeting.Category getCategory() {
         return Category;
     }
 
-    public String getType() {
+    public Meeting.Type getType() {
         return Type;
     }
 
@@ -57,11 +57,11 @@ public class MeetingFilters {
         ResponsiblePerson = responsiblePerson;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Meeting.Category category) {
         Category = category;
     }
 
-    public void setType(String type) {
+    public void setType(Meeting.Type type) {
         Type = type;
     }
 

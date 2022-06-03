@@ -6,23 +6,30 @@ import java.util.Date;
 @Entity
 public class Meeting implements Comparable<Meeting>{
 
-//    Name
-//○ ResponsiblePerson
-//○ Description
 //○ Category (Fixed values - CodeMonkey / Hub / Short / TeamBuilding)
 //○ Type (Fixed values - Live / InPerson)
-//○ StartDate
-//○ EndDate
+    public enum Category{
+    CodeMonkey,
+    Hub,
+    Short,
+    TeamBuilding
+    }
+
+    public enum Type{
+        Live,
+        InPerson
+    }
+
 
     private String Name;
     private String ResponsiblePerson;
     private String Description;
-    private String Category; // enum possibly
-    private String Type; // enum possibly
+    private Category Category; // enum possibly
+    private Type Type; // enum possibly
     private Date StartDate;
     private Date EndDate;
 
-    public Meeting(String name, String responsiblePerson, String description, String category, String type, Date startDate, Date endDate) {
+    public Meeting(String name, String responsiblePerson, String description, Category category, Type type, Date startDate, Date endDate) {
         this.Name = name;
         this.ResponsiblePerson = responsiblePerson;
         this.Description = description;
@@ -47,11 +54,11 @@ public class Meeting implements Comparable<Meeting>{
         this.Description = description;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.Category = category;
     }
 
-    public void setType(String type) {
+    public void setType(Type type) {
         this.Type = type;
     }
 
@@ -75,11 +82,11 @@ public class Meeting implements Comparable<Meeting>{
         return Description;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return Category;
     }
 
-    public String getType() {
+    public Type getType() {
         return Type;
     }
 

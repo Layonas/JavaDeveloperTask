@@ -147,7 +147,7 @@ public class MeetingRegister {
         return meetingList;
     }
 
-    private List<Meeting> filterByType(String type) {
+    private List<Meeting> filterByType(Meeting.Type type) {
         List<Meeting> meetingList = new ArrayList<>();
 
         for (Meeting m : this.meetings){
@@ -159,7 +159,7 @@ public class MeetingRegister {
         return meetingList;
     }
 
-    private List<Meeting> filterByCategory(String category) {
+    private List<Meeting> filterByCategory(Meeting.Category category) {
         List<Meeting> meetingList = new ArrayList<>();
 
         for (Meeting m : this.meetings){
