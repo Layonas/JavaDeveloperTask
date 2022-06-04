@@ -1,13 +1,9 @@
 package com.dovydas.JDT.Models;
 
-import javax.persistence.Entity;
 import java.util.Date;
 
-@Entity
 public class Meeting implements Comparable<Meeting>{
 
-//○ Category (Fixed values - CodeMonkey / Hub / Short / TeamBuilding)
-//○ Type (Fixed values - Live / InPerson)
     public enum Category{
     CodeMonkey,
     Hub,
