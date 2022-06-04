@@ -32,6 +32,27 @@ The body of the request should look like:
     "Short"                                 // The amount or the criteria you want to filter ex: (for catefory -> "Short" or "Hub")
 }
 ```
+When filtering by date you can select to filter for each starting date or ending date or you can select both:
+```
+{
+    "startDate":                      
+    "2020-02-01"                            
+}
+```
+```
+{
+    "endDate":                      
+    "2020-02-03"                            
+}
+```
+```
+{
+    "startDate":                      
+    "2020-02-01",
+    "endDate":
+    "2020-02-03"
+}
+```
 
 `PUT` to `localhost:8080/person` to add a person to a meeting.
 The body of the request should look like:
