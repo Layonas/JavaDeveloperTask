@@ -31,7 +31,7 @@ The body of the request should look like:
     "category":                             // The name of the filter object you want to select ex: description, category, type etc.
     "Short"                                 // The amount or the criteria you want to filter ex: (for catefory -> "Short" or "Hub")
 }
-``
+```
 
 `PUT` to `localhost:8080/person` to add a person to a meeting.
 The body of the request should look like:
