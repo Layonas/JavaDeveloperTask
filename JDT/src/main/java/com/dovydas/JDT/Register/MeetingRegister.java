@@ -25,7 +25,8 @@ public class MeetingRegister {
     }
 
     public void add(Meeting meeting){
-        this.meetings.add(meeting);
+        if(!this.meetings.contains(meeting))
+            this.meetings.add(meeting);
     }
 
     public Meeting getByName(String name){
